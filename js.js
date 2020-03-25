@@ -6,10 +6,12 @@ let in1 = document.getElementById('in1'),
     btn_in1_down = document.getElementById('btn-in1-down'), //кнопка 2 клапана вниз
     btn_in2_up = document.getElementById('btn-in2-up'), //кнопка 2 клапана вверх
     btn_in2_down = document.getElementById('btn-in2-down'), //кнопка 2 клапана вниз
-    result = document.getElementById('result'),
+    result = document.getElementById('result'), // результат 
     inputs = [],
     gain_result;
 
+
+    /*------------------------------ОБРАБОТЧИКИ СОБЫТИЙ-----------------------*/ 
 btn_in1_up.addEventListener('click', () => {
     if(in1.value == 100){
         in1.value = 100;
@@ -43,6 +45,10 @@ btn_in2_down.addEventListener('click', () => {
         in2.value--;
     }
 });
+/*------------------------------ОБРАБОТЧИКИ СОБЫТИЙ-----------------------*/ 
+
+
+/*------------------------------КЛАСС УСИЛИТЕЛЯ-----------------------*/ 
 
 class Gain {
     constructor(in_x, k) {
@@ -53,8 +59,9 @@ class Gain {
         return this.k * this.in_x;
     }
 }
-    inputs.push(new Gain(in1.value, 10));
-    inputs.push(new Gain(in2.value, 15));
+
+inputs.push(new Gain(in1.value, 10)); //Добавляем в массив значения усилителя для 1 клапана
+inputs.push(new Gain(in2.value, 15)); //Добавляем в массив значения усилителя для 2 клапана
 
 
 setInterval(() => {
@@ -63,15 +70,11 @@ setInterval(() => {
     gain_result = inputs[0].calc() + inputs[1].calc();
 }, 1000);
 
+
+/*------------------------------КЛАСС УСИЛИТЕЛЯ-----------------------*/ 
+
     
 
-// class BaseBlock{
-//     constructor(in_x_1, in_x_2, yi_1){
-//       this.in_x_1 = in_x_1;
-//       this.in_x_2 = in_x_2;
-//       this.yi_1 = yi_1;
-//    }
-// }
 
 class APLBlock{
     constructor(T, dt, gain_result, yi_1) {

@@ -11,7 +11,7 @@ var scale = 1;
 addEmptyValues(values, samples);
 
 
-
+/*------------------------------КЛАСС УСИЛИТЕЛЯ-----------------------*/ 
 var originalCalculateXLabelRotation = Chart.Scale.prototype.calculateXLabelRotation
 
 function initialize() {
@@ -134,11 +134,6 @@ function progress() {
   }
 
 
-
-  // values.push({
-  //   x: new Date(),
-  //   y: value
-  // });
   values.shift();
 }
 
