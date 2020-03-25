@@ -1,0 +1,29 @@
+.main-div{
+    width: 800px;
+    height: 500px;
+    background-image: url(img/img1.PNG);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+input{
+    width: 40px;
+    padding: 0;
+    margin: 0;
+}
+div{
+    position: relative;
+}
+.div-in1{
+    left: 559px;
+    top: 410px;
+}
+.div-in2{
+    top: 407px;
+    left: 100px;
+}
+.result{
+    position: relative;
+    top: 70px;
+    left: 290px;
+    width: 80px;
+}

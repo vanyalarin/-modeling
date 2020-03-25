@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+    <script src="https://playground.abysscorp.org/chartjs/livecharts/dist/Chart.min.js"></script>
+    
+</head>
+<body>
+
+    <div class="main-div">
+        <div class="div-in1">
+            <button id="btn-in1-up">up</button>            
+            <input type="text" id="in1" class="in1">
+            <button id="btn-in1-down">down</button>
+        </div> 
+        <div class="div-in2">
+            <button id="btn-in2-up">up</button> 
+            <input type="text" id="in2" class="in2">
+            <button id="btn-in2-down">down</button>
+        </div>
+
+            <input type="text" id="result" class="result">
+
+    </div>
+    <!-- <canvas id="myChart"></canvas> -->
+    <canvas id="chart0" style="width:512px;height:320px"></canvas>
+    <canvas id="chart1" style="width:512px;height:320px; display: none;"></canvas>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="js.js"></script>
+    <script src="chart.js"></script>
+
+</body>
+</html>
